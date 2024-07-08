@@ -71,6 +71,7 @@ const DisplayWeather = () => {
     try {
       const { currentWeatherData } = await fetchWeatherData(searchCity);
       setWeatherData(currentWeatherData);
+      setSearchCity(""); // 검색 후 입력란을 초기화
     } catch (error) {
       console.error("No Results Found");
     }
